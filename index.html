@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport"
+			content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+	</head>
+	<style>
+		html,body{
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			height: 100%;
+			position:relative;
+			overflow: hidden;
+		}
+		input {
+			border: none;
+			outline: none;
+			color: #000;
+			font-size: 20px;
+			height: 25px;
+			width: 300px;
+		}
+		.imgList{
+			font-size: 0;
+			width: 100%;
+			display: flex;
+			margin: 20px 0;
+		}
+		.imgOut{
+			position: relative;
+			width: 10%;
+		}
+		.imgOut .ball{
+			width: 100%;
+		}
+		.imgOut .line{
+			width: 10px;
+			position: absolute;
+			top: 100%;
+			left: 47.9%;
+			transform: translateX(-50%);
+		}
+		.fire{
+			width: 100px;
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			font-size: 0;
+			transform: translateX(-50%);
+		}
+		.fire img{
+			width: 100%;
+		}
+		.bulletOut{
+			width: 20px;
+			height: 100px;
+			position: absolute;
+			bottom: 100%;
+			left: 49%;
+			transform: translateX(-50%);
+		}
+		.btn{
+			background-color: rgb(217, 217, 217);
+			color: #000;
+			width: 150px;
+			height: 60px;
+			line-height: 60px;
+			text-align: center;
+			border-radius: 20px;
+			font-size: 20px;
+			position: absolute;
+			bottom: 0;
+			cursor: pointer;
+			left: 70%;
+			font-weight: 600;
+		}
+		.fireOut{
+			width: 100%;
+			height: 100%;
+			position: relative;
+			transform-origin:center bottom;
+		}
+		.bullet{
+			background-color: rgb(217, 217, 217);
+			width: 20px;
+			border-radius: 50%;
+			height: 20px;
+			position: absolute;
+			bottom: 5px;
+			animation: animateBuller linear 2s forwards;
+		}
+		@keyframes animateBuller{
+			0%{
+				bottom: 5px;
+			}
+			100%{
+				bottom: 100%;
+			}
+		}
+	</style>
+	<body>
+		<input type="text" id="num" placeholder="Please enter your phone number">
+		<div class="imgList">
+			<div class="imgOut">
+				<img src="./img/0.jpg" count='0' class="ball" alt="">
+				<img src="./img/line.jpg" class="line" alt="">
+			</div>
+			<div class="imgOut">
+				<img src="./img/2.jpg" count="2" class="ball" alt="">
+				<img src="./img/line.jpg" class="line" alt="">
+			</div>
+			<div class="imgOut">
+				<img src="./img/1.jpg" count='1' class="ball" alt="">
+				<img src="./img/line.jpg" class="line" alt="">
+			</div>
+			<div class="imgOut">
+				<img src="./img/8.jpg" count='8' class="ball" alt="">
+				<img src="./img/line.jpg" class="line" alt="">
+			</div>
+			<div class="imgOut">
+				<img src="./img/4.jpg" count='4' class="ball" alt="">
+				<img src="./img/line.jpg" class="line" alt="">
+			</div>
+			<div class="imgOut">
+				<img src="./img/3.jpg" count='3' class="ball" alt="">
+				<img src="./img/line.jpg" class="line" alt="">
+			</div>
+			<div class="imgOut">
+				<img src="./img/5.jpg" count='5' class="ball" alt="">
+				<img src="./img/line.jpg" class="line" alt="">
+			</div>
+			<div class="imgOut">
+				<img src="./img/7.jpg" count='7' class="ball" alt="">
+				<img src="./img/line.jpg" class="line" alt="">
+			</div>
+			<div class="imgOut">
+				<img src="./img/6.jpg" count='6' class="ball" alt="">
+				<img src="./img/line.jpg" class="line" alt="">
+			</div>
+			<div class="imgOut">
+				<img src="./img/9.jpg" count='9' class="ball" alt="">
+				<img src="./img/line.jpg" class="line" alt="">
+			</div>
+		</div>
+		<div class="fire">
+			<div class="fireOut">
+				<div class="bulletOut">
+					
+				</div>
+				<img id="fireImg" src="./img/fire.png" alt="">
+			</div>
+		</div>
+		<div class="btn" >Start</div>
+	</body>
+	<script src="js/index.js"></script>
+</html>
